@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <script>
+     <script type='text/javascript'>
+function checkform(){
+    if(document.getElementById("un").value == 'kipling'){
+        alert("Login Successful");
+        window.location = "http://www.google.com/"
+    }else{
+        alert("Access denied. Valid answer is required.");
+    }
+}
+</script>
+     
+  </head>
+  <body>
+    <h1>ABC</h1>
+  
+<br>
+<form method="post" action="" enctype="multipart/form-data" onsubmit="return checkform(this);">
+<p><span style="width:180px">Username: </span><input type="text" name="username" id='un'></p></p>
+<input type="submit" value="SUBMIT" />
+</form>
+  </body>
+</html>
