@@ -1,26 +1,33 @@
-<!DOCTYPE html>
 <html>
-  <head>
-   <script>
-function checkform(){
-    if(document.getElementById("un").value == 'kipling'){
-        alert("Login Successful");
-        window.location = "bday/page1.html"
-    }else{
-        alert("Access denied. Valid answer is required.");
-    }
+<head>
+<script>
+function check(oForm)
+{
+	var guess = oForm.fieldname.value;
+
+	if (guess == "")
+	{
+		alert ("You must give an answer!");
+	}
+	else if (guess=="kipling")
+	{
+		alert ("Correct!");
+		window.location = "http://www.yahoo.com";
+	}
+	else
+	{
+		alert ("Incorrect");
+		window.location= "http://www.google.com";
+	}
 }
 </script>
-     
-  </head>
-  <body>
-    <h1>ABC</h1>
-  
-<br>
-<form method="post" action="" enctype="multipart/form-data" onsubmit="return checkform(this);">
-<p><span style="width:180px">Username: </span><input type="text" name="username" id='un'></p></p>
-<input type="submit" value="SUBMIT" />
+</head>
+<body>
+
+<form>
+	First date? <input type="text" name="fieldname">
+	<input type="button" name="B1" value="Submit" onclick="check(this.form);">
 </form>
 
-  </body>
+</body>
 </html>
